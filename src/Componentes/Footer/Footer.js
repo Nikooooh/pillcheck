@@ -2,7 +2,7 @@ import {BsGithub,BsLinkedin,BsYoutube} from 'react-icons/bs'
 
 function Footer(){
     return(
-        <footer className="flex flex-col items-center justify-center h-36">
+        <footer className="flex m-auto flex-col items-center justify-center h-36 lg:m-auto">
            <p className='mb-4 text-slate-500 max-w-md text-center sm:max-w-full'>© 2023 Pilulas.com.br - Todos os direitos reservados.</p>
         <div className="flex space-x-5" >
         <a href="https://github.com/Nikooooh" target="_blank" rel="noopener noreferrer">
