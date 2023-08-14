@@ -8,9 +8,9 @@ function Header(){
             <img className='h-28 w-40 lg:h-36 lg:w-52' src={Logo} alt='Logo do Site'/>
         </Link>
         <menu className='grid grid-rows-3 gap-2 ml-12'>
-            <Link to="/sobre" className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Sobre</Link>
-            <h2 className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Pesquisar</h2>
-            <h2 className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Contato</h2>
+            <Link to="/sobre" className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Sobre</Link>
+            <h2 className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Pesquisar</h2>
+            <h2 className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Contato</h2>
         </menu>
     </div>
     )
