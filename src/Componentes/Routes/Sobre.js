@@ -1,6 +1,10 @@
+import Footer from '../Footer/Footer';
+
 function Sobre(){
     return(
-        <h1></h1>
+        <div className='mt-32'>
+            <Footer/>
+        </div>
     )
 }
 

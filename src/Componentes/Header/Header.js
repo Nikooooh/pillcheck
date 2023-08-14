@@ -3,12 +3,14 @@ import {Link} from 'react-router-dom';
 
 function Header(){
     return(
-    <div className=" justify-center flex w-full h-40 lg:h-50 xl:h-50 2xl:h-52">
-        <Link to="/"> <img className='ml-5 mt-5 h-28 w-40 lg:h-40 lg:w-52 lg:mt-4' src={Logo} alt='Logo do Site'/></Link>
-        <menu className=' p-8 table-column mt-0.5 ml-5 lg:ml-10 lg:p-10 lg:mt-1 xl:mt-1 2xl:mt-2'>
-            <Link to="/sobre" className='mb-1 text-slate-800 text-xl font-sans font-medium hover:bg-sky-200 rounded lg:text-3xl'> Sobre </Link> 
-            <h2 className=' mb-1 text-slate-800 text-xl font-sans font-medium hover:bg-sky-200 rounded lg:text-3xl'> Pesquisar </h2>
-            <h2 className=' mb-1 text-slate-800 text-xl font-sans font-medium hover:bg-sky-200 rounded lg:text-3xl'> Contato </h2>
+    <div className="bg-gray-100 flex justify-center items-center w-full h-40 lg:h-50 xl:h-50 2xl:h-52 p-5 lg:p-8 xl:p-10 2xl:p-12">
+         <Link to="/">
+            <img className='h-28 w-40 lg:h-36 lg:w-52' src={Logo} alt='Logo do Site'/>
+        </Link>
+        <menu className='grid grid-rows-3 gap-2 ml-12'>
+            <Link to="/sobre" className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Sobre</Link>
+            <h2 className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Pesquisar</h2>
+            <h2 className='text-slate-700 text-lg font-medium rounded lg:text-2xl'>Contato</h2>
         </menu>
     </div>
     )
