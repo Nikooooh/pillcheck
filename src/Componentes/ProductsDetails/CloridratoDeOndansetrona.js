@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { products } from '../SectionPills/SectionPills';
+import { products } from '../SectionPills/Remedios';
 import Footer from '../Footer/Footer';
 
 function ProductDetail() {

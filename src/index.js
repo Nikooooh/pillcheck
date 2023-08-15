@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './Componentes/Header/Header';
 import Sobre from './Componentes/Routes/Sobre';
 import Home from './Componentes/Routes/Home';
+import Contato from './Componentes/Routes/Contato';
 import ProductDetail from './Componentes/ProductsDetails/CloridratoDeOndansetrona';
 
 ReactDOM.render(
@@ -15,6 +16,7 @@ ReactDOM.render(
       <Routes>
         <Route path='/sobre' element={<Sobre />} />
         <Route path='/' element={<Home />} />
+        <Route path='/contato' element={<Contato />} />
         <Route path="/product/:slug" element={<ProductDetail />} />
       </Routes>
     </BrowserRouter>
