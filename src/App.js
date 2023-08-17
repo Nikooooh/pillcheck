@@ -9,7 +9,7 @@ export default function App() {
         <Header/>
         <SectionPills/>
         <Footer/>
-   </div>
+    </div>
 
   )
 }

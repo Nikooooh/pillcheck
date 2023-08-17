@@ -25,7 +25,9 @@ function FilterComponent({ onFilterChange }) {
                       <button onClick={() => {onFilterChange('all'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Todos</button>
                       <button onClick={() => {onFilterChange('dor-e-febre'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Dor e Febre</button>
                       <button onClick={() => {onFilterChange('antibioticos'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Antibióticos</button>
-                      {/* ... outras categorias */}
+                      <button onClick={() => {onFilterChange('gripe-e-resfriados'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Gripes e Resfriados</button>
+                      <button onClick={() => {onFilterChange('nauseas'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Nausea</button>
+                      <button onClick={() => {onFilterChange('sono-e-ansiedade'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sono e Ansiedade</button>
                   </div>
               </div>
           }
@@ -60,35 +62,61 @@ function ProductCard({ image, name, price, category }) {
 }
 
 function SectionPills() {
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const PRODUCTS_PER_PAGE = 9;
+
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filteredProducts = products.filter(product => {
-    if (activeFilter === 'all') return true;
-    return product.category === activeFilter; // assumindo que seus produtos têm um campo 'category'
+      if (activeFilter === 'all') return true;
+      return product.category === activeFilter; 
   });
+
+  const currentProducts = filteredProducts.slice(
+      (currentPage - 1) * PRODUCTS_PER_PAGE,
+      currentPage * PRODUCTS_PER_PAGE
+  );
 
  
   return (
     <section className="h-full w-full pt-8 pb-8 md:pt-12 lg:pt-16 xl:pt-16 2xl:pt-18 px-4 sm:px-8 md:px-12 lg:px-16">
         <div className="product-container w-full max-w-screen-xl mx-auto flex flex-col items-center">
 
-            {/* Título e Descrição */}
+            
             <div className="mb-4 text-center">
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">Nossos Produtos</h2>
                 <p className="text-gray-500 mt-2">Selecione uma categoria abaixo para filtrar os produtos.</p>
             </div>
 
-            {/* Filtro */}
+            
             <FilterComponent onFilterChange={setActiveFilter} />
 
-            {/* Lista de Produtos */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 w-full">
-                {filteredProducts.map((product, index) => (
+                {currentProducts.map((product, index) => (
                     <ProductCard key={index} {...product} />
                 ))}
             </div>
+
+            <div className="mt-8 flex justify-center items-center">
+                <button
+                    disabled={currentPage === 1}
+                    onClick={() => setCurrentPage(currentPage - 1)}
+                    className="px-4 py-2 border rounded-md hover:bg-gray-200"
+                >
+                    Anterior
+                </button>
+                <span className="mx-4 flex items-center">{currentPage}</span>
+                <button
+                    disabled={filteredProducts.length <= currentPage * PRODUCTS_PER_PAGE}
+                    onClick={() => setCurrentPage(currentPage + 1)}
+                    className="px-4 py-2 border rounded-md hover:bg-gray-200"
+                >
+                    Próximo
+                </button>
+          </div>
         </div>
-        <Footer />
+      <Footer />
     </section>
 );
 }
