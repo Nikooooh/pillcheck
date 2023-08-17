@@ -9,7 +9,7 @@ function Header(){
         </Link>
         <menu className='grid grid-rows-3 gap-2 ml-12'>
             <Link to="/sobre" className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Sobre</Link>
-            <h2 className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Pesquisar</h2>
+            <Link to="/pesquisa" className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Pesquisar</Link>
             <Link to="/contato" className='text-slate-800 text-lg font-medium rounded lg:text-2xl'>Contato</Link>
         </menu>
     </div>

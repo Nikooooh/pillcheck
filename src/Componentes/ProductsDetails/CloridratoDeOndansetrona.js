@@ -16,10 +16,10 @@ function ProductDetail() {
     <div className="bg-gray-100 min-h-screen flex flex-col">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex-grow">
         <div className="max-w-5xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:flex">
-          <div className="md:w-1/2">
-            <img src={image} alt={`Foto de ${name}`} className="w-full h-auto object-cover" />
+          <div className="md:w-1/3 p-4 flex items-center">
+            <img src={image} alt={`Foto de ${name}`} className="w-full h-auto object-contain" />
           </div>
-          <div className="p-6 md:w-1/2">
+          <div className="p-6 md:w-2/3">
             <h2 className="text-3xl font-semibold mb-2">{name}</h2>
             <p className="text-gray-600 mb-4">{price}</p>
             <div className="border-t border-gray-300 pt-4 mt-4">
@@ -35,5 +35,4 @@ function ProductDetail() {
     </div>
   );
 }
-
-export default ProductDetail;
+export default ProductDetail

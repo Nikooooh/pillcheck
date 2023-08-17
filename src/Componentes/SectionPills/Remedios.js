@@ -13,6 +13,7 @@ export const products = [
       image: Remedio,
       name: 'Cloridrato de Ondansetrona 8mG',
       price: 'R$ 49,90',
+      category: 'dor-e-febre',
       description:'Para que serve Cloridrato de Ondansetrona? Adultos: O cloridrato de ondansetrona é indicado para o controle de náuseas e vômitos induzidos por quimioterapia e radioterapia. Também é indicado para prevenção de náuseas e vômitos do período pós-operatório.',
       slug: 'cloridrato-de-ondansetrona-8mg',
     },
