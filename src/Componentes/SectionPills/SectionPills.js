@@ -120,9 +120,11 @@ function SectionPills() {
                     Próximo
                 </button>
           </div>
-          <div className="bg-red-500 text-white py-5 text-center text-lg font-bold mx-4 mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
-               Destaque-se com exclusividade: Seus medicamentos não são apenas mais um na lista. Aqui, quando você divulga, ninguém mais divulga igual. Descubra como.
+          <Link to="/videos">
+          <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600  text-white py-4 text-center text-base md:text-lg font-bold mx-2 md:mx-4 mt-6 md:mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
+               Destaque-se com exclusividade: Seus medicamentos não são apenas mais um na lista. Em Pilulas.com.br, quando você divulga, ninguém mais divulga igual. Clique aqui e descubra como!
         </div>
+        </Link> 
         </div>
       <Footer />
     </section>

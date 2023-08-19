@@ -9,6 +9,7 @@ import Home from './Componentes/Routes/Home';
 import Contato from './Componentes/Routes/Contato';
 import Pesquisa from './Componentes/Routes/Pesquisa';
 import ProductDetail from './Componentes/ProductsDetails/CloridratoDeOndansetrona';
+import DivulgueAqui from './Componentes/Routes/Videos';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -20,6 +21,7 @@ ReactDOM.render(
         <Route path='/contato' element={<Contato />} />
         <Route path='/pesquisa' element={<Pesquisa />} />
         <Route path="/product/:slug" element={<ProductDetail />} />
+        <Route path="/videos" Component={DivulgueAqui} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
