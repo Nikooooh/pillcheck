@@ -68,6 +68,11 @@ function SectionPills() {
 
   const [activeFilter, setActiveFilter] = useState('all');
 
+  const handleFilterChange = (filter) => {
+    setActiveFilter(filter);
+    setCurrentPage(1); 
+  };
+
   const filteredProducts = products.filter(product => {
       if (activeFilter === 'all') return true;
       return product.category === activeFilter; 
@@ -90,7 +95,7 @@ function SectionPills() {
             </div>
 
             
-            <FilterComponent onFilterChange={setActiveFilter} />
+            <FilterComponent onFilterChange={handleFilterChange} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 w-full">
                 {currentProducts.map((product, index) => (
@@ -115,6 +120,9 @@ function SectionPills() {
                     Próximo
                 </button>
           </div>
+          <div className="bg-red-500 text-white py-5 text-center text-lg font-bold mx-4 mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
+               Destaque-se com exclusividade: Seus medicamentos não são apenas mais um na lista. Aqui, quando você divulga, ninguém mais divulga igual. Descubra como.
+        </div>
         </div>
       <Footer />
     </section>
