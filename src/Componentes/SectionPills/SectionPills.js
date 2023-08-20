@@ -49,7 +49,7 @@ function ProductCard({ image, name, price, category }) {
       <div className="text-center">
         <h4 className='text-gray-700 font-medium'>{name}</h4>
         
-        <p className="text-sm text-red-500 font-bold mt-2">Melhor preço de hoje!</p>
+        <p className="text-sm text-red-500 font-bold mt-2">Melhor escolha!</p>
         <h3 className='mt-2 text-red-600 font-semibold'>{price}</h3>
       </div>
 
