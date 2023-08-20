@@ -6,6 +6,11 @@ import Befenol from '../../Imagens/perfenol.jpg';
 import Resfenol from '../../Imagens/resfenol.jpg';
 import Xanax from '../../Imagens/xanax.jpg';
 import Sedafit from '../../Imagens/sedatif.jpg';
+import Dramin from '../../Imagens/dramin.jpg';
+import Atroveran from '../../Imagens/atroveran.jpg';
+import Fluimucil from '../../Imagens/fluimucil.jpg';
+import Neosaldina from '../../Imagens/neosaldina.jpg';
+import Novalgina from '../../Imagens/novalgina.jpg';
 import Serenata from '../../Imagens/serenata.png';
 
 export const products = [
@@ -82,7 +87,7 @@ export const products = [
         slug: 'sedatif-30-cápsulas',
     },
     {
-        image: 'Novalgina',
+        image: Novalgina,
         name: 'Novalgina 500mg 10 comprimidos',
         price: 'R$ 22,90',
         category: 'dor-e-febre',
@@ -90,7 +95,7 @@ export const products = [
         slug: 'novalgina-500mg-10-comprimidos'
     },
     {
-        image: 'Neosaldina',
+        image: Neosaldina,
         name: 'Neosaldina 10mL gotas',
         price: 'R$ 25,50',
         category: 'dor-e-febre',
@@ -98,7 +103,7 @@ export const products = [
         slug: 'neosaldina-10ml-gotas'
     },
     {
-        image: 'Dramin',
+        image: Dramin,
         name: 'Dramin B6 50mg 10 comprimidos',
         price: 'R$ 16,90',
         category: 'nauseas',
@@ -106,7 +111,7 @@ export const products = [
         slug: 'dramin-b6-50mg-10-comprimidos'
     },
     {
-        image: 'Atroveran',
+        image: Atroveran,
         name: 'Atroveran 10mL gotas',
         price: 'R$ 29,50',
         category: 'dor-e-febre',
@@ -114,7 +119,7 @@ export const products = [
         slug: 'atroveran-10ml-gotas'
     },
     {
-        image: 'Fluimucil',
+        image: Fluimucil,
         name: 'Fluimucil 600mg efervescente 10 comprimidos',
         price: 'R$ 35,90',
         category: 'gripe-e-resfriados',
