@@ -10,7 +10,7 @@ function Header() {
     }
 
     return (
-        <div className="bg-gray-100 shadow-md font-sans flex justify-center items-center w-full h-40 lg:h-50 xl:h-50 2xl:h-52 p-5 lg:p-8 xl:p-10 2xl:p-12">
+        <div className="bg-gray-100 shadow-lg font-sans flex justify-center items-center w-full h-40 lg:h-50 xl:h-50 2xl:h-52 p-5 lg:p-8 xl:p-10 2xl:p-12">
             <Link to="/" className="mr-10">
                 <img className='h-28 w-40 lg:h-36 lg:w-52' src={Logo} alt='Logo do Site' />
             </Link>

@@ -71,7 +71,7 @@ function ProductCard({ image, name, price, category }) {
       </div>
 
       <div className="mt-4 flex space-x-4 w-full px-4 justify-center">
-        <button className='rounded-md p-1 px-3 bg-red-500 text-white hover:bg-red-600 w-1/2 text-center'>Comprar</button>
+        <Link to="/compra-exclusiva" className='rounded-md p-1 px-3 bg-red-500 text-white hover:bg-red-600 w-1/2 text-center'>Comprar</Link>
         <Link to={`/product/${slug}`} className='rounded-md p-1 px-3 bg-orange-500 text-white hover:bg-orange-600 w-1/2 text-center'>Detalhes</Link>
       </div>
     </div>
@@ -107,7 +107,7 @@ function SectionPills() {
 
             
             <div className="mb-4 text-center">
-                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">Nossos Produtos</h2>
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-700">Todos Produtos</h2>
                 <p className="text-gray-500 mt-2">Selecione uma categoria abaixo para filtrar os produtos.</p>
             </div>
 
@@ -139,7 +139,7 @@ function SectionPills() {
           </div>
           <Link to="/videos">
           <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600  text-white py-4 px-3 text-center text-base md:text-lg font-bold mx-2 md:mx-4 mt-6 md:mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
-               Destaque-se com exclusividade: <br />  Seus medicamentos não são apenas mais um na lista. Em Pilulas.com.br, quando você divulga, ninguém mais divulga igual. <br />Clique aqui e descubra como!
+               Destaque-se com exclusividade: <br />  Seus produtos não são apenas mais um na lista. Em Pilulas.com.br, quando você divulga, ninguém mais divulga igual. <br />Clique aqui e descubra como!
         </div>
         </Link> 
         </div>

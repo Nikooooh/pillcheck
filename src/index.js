@@ -10,6 +10,7 @@ import Contato from './Componentes/Routes/Contato';
 import Pesquisa from './Componentes/Routes/Pesquisa';
 import ProductDetail from './Componentes/ProductsDetails/CloridratoDeOndansetrona';
 import DivulgueAqui from './Componentes/Routes/Videos';
+import ExclusivePurchasePage from './Componentes/Routes/CompraExcluisiva';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route path='/pesquisa' element={<Pesquisa />} />
         <Route path="/product/:slug" element={<ProductDetail />} />
         <Route path="/videos" Component={DivulgueAqui} />
+        <Route path="/compra-exclusiva" Component={ExclusivePurchasePage} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

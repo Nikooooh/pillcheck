@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { products } from '../SectionPills/Remedios';
 import Footer from '../Footer/Footer';
+import { Link } from 'react-router-dom';
 
 function ProductDetail() {
   const { slug } = useParams();
@@ -14,7 +15,7 @@ function ProductDetail() {
   const { image, name, price, description } = product;
 
   return (
-    <div className="bg-gray-100 min-h-screen flex flex-col">
+    <div className=" min-h-screen flex flex-col">
       <div className="container mx-auto px-4 md:px-6 lg:px-8 flex-grow mt-12">
         <div className="max-w-5xl mx-auto bg-white p-6 md:p-12 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
           
@@ -29,7 +30,7 @@ function ProductDetail() {
               <p className="text-gray-700 text-lg leading-relaxed">{description}</p>
             </div>
             <div className="mt-8 flex justify-center md:justify-start">
-              <button className="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition duration-300 font-bold text-xl shadow-md transform hover:scale-105">Comprar</button>
+              <Link to="/compra-exclusiva" className="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-700 transition duration-300 font-bold text-xl shadow-md transform hover:scale-105">Comprar</Link>
             </div>
           </div>
           
