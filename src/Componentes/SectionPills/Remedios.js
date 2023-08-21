@@ -1,17 +1,17 @@
-import Remedio from '../../Imagens/remedio1.jpg';
-import Dipirona from '../../Imagens/dipirona.jpg';
-import Doril from '../../Imagens/doril.jpg';
-import Benegrip from '../../Imagens/benegrip.jpg';
-import Perfenol from '../../Imagens/perfenol.jpg';
-import Resfenol from '../../Imagens/resfenol.jpg';
-import Xanax from '../../Imagens/xanax.jpg';
-import Sedafit from '../../Imagens/sedatif.jpg';
-import Dramin from '../../Imagens/dramin.jpg';
-import Atroveran from '../../Imagens/atroveran.jpg';
-import Fluimucil from '../../Imagens/fluimucil.jpg';
-import Neosaldina from '../../Imagens/neosaldina.jpg';
-import Novalgina from '../../Imagens/novalgina.jpg';
-import Serenata from '../../Imagens/serenata.png';
+import Remedio from '../../Imagens/Ondansetrona.png';
+import Dipirona from '../../Imagens/Dipirona.png';
+import Doril from '../../Imagens/Doril.png';
+import Benegrip from '../../Imagens/Benegrip.png';
+import Perfenol from '../../Imagens/Perfenol.png';
+import Resfenol from '../../Imagens/Resfenol.png';
+import Xanax from '../../Imagens/Alprazolam.png';
+import Sedafit from '../../Imagens/Sedatif.png';
+import Dramin from '../../Imagens/Dramin.png';
+import Atroveran from '../../Imagens/Atroveran.png';
+import Fluimucil from '../../Imagens/Fluimucil.png';
+import Neosaldina from '../../Imagens/Neosaldina.png';
+import Novalgina from '../../Imagens/Novalgina.png';
+import Serenata from '../../Imagens/Serenata.png';
 
 export const products = [
     {
@@ -44,7 +44,7 @@ export const products = [
         price: 'R$ 59,90',
         category: 'gripe-e-resfriados',
         description:'Este medicamento é útil para tratar os sintomas associados a resfriados e gripes, como congestão nasal, dor de cabeça, febre, espirros e corrimento nasal. No entanto, é importante usar este medicamento conforme as instruções e sob a orientação de um profissional de saúde. Além disso, devido à possibilidade de sonolência causada pelo Maleato de Clorfeniramina, deve-se ter cuidado ao dirigir ou operar máquinas pesadas ao tomar medicamentos que contenham este componente.',
-        slug: 'befenol-30-cápsulas',
+        slug: 'perfenol-30-cápsulas',
     },
     {
         image: Resfenol,
@@ -56,11 +56,11 @@ export const products = [
     },
     {
         image: Benegrip,
-        name: 'Benegrip com 4 unidades',
+        name: 'Benegrip com 8 unidades',
         price: 'R$ 9,90',
         category: 'gripe-e-resfriados',
         description:'O Benegrip é um medicamento utilizado no Brasil para aliviar sintomas de gripes e resfriados. Ele combina o Paracetamol, que alivia dores e reduz a febre; o Cloridrato de Fenilefrina, que atua como descongestionante nasal; e o Maleato de Clorfeniramina, um anti-histamínico que trata sintomas alérgicos como espirros e corrimento nasal. Devido à presença do Maleato de Clorfeniramina, pode causar sonolência em alguns usuários. É indicado para alívio sintomático da gripe e resfriado.',
-        slug: 'benegrip-com-4-unidades',
+        slug: 'benegrip-com-8-unidades',
     },
     {
         image: Xanax,
