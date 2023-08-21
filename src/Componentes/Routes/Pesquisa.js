@@ -55,7 +55,7 @@ function SearchPage() {
                 <img src={product.image} alt={product.name} className="w-full h-40 object-contain rounded-md" />
                 <div className="space-y-2">
                   <h3 className="font-medium text-lg">{product.name}</h3>
-                  <span className="text-orange-500 font-semibold">{product.price}</span>
+                  <span className="text-red-500 font-semibold">{product.price}</span>
                   <p className="text-gray-600">{product.description}</p>
                   <button 
                     onClick={() => handlePurchase(product)}

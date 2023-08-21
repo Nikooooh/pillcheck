@@ -2,7 +2,7 @@ import Remedio from '../../Imagens/remedio1.jpg';
 import Dipirona from '../../Imagens/dipirona.jpg';
 import Doril from '../../Imagens/doril.jpg';
 import Benegrip from '../../Imagens/benegrip.jpg';
-import Befenol from '../../Imagens/perfenol.jpg';
+import Perfenol from '../../Imagens/perfenol.jpg';
 import Resfenol from '../../Imagens/resfenol.jpg';
 import Xanax from '../../Imagens/xanax.jpg';
 import Sedafit from '../../Imagens/sedatif.jpg';
@@ -39,7 +39,7 @@ export const products = [
         slug: 'doril-10-comprimidos',
     },
     {
-        image: Befenol,
+        image: Perfenol,
         name: 'Perfenol 30 cápsulas',
         price: 'R$ 59,90',
         category: 'gripe-e-resfriados',

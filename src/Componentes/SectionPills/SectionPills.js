@@ -4,9 +4,22 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
 
-
-function FilterComponent({ onFilterChange }) {
+function FilterComponent({ onFilterChange, activeFilter  }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const buttonStyle = filter => 
+    filter === activeFilter 
+      ? "block px-4 py-2 text-sm text-white bg-orange-500 hover:bg-orange-600"
+      : "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100";
+
+      const filterMap = {
+        'Todos': 'all',
+        'Dor e Febre': 'dor-e-febre',
+        'Antibiótico': 'antibioticos',
+        'Gripe e Resfriados': 'gripe-e-resfriados',
+        'Náusea': 'nauseas',
+        'Sono e Ansiedade': 'sono-e-ansiedade'
+      };
 
   return (
     <div className="mb-6 w-full sm:w-auto">
@@ -19,21 +32,25 @@ function FilterComponent({ onFilterChange }) {
               </button>
           </div>
 
-          {isOpen && 
-                <div className="origin-top-right mt-2 w-full sm:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+          {isOpen && (
+                  <div className="origin-top-right mt-2 w-full sm:w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
                   <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                      <button onClick={() => {onFilterChange('all'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Todos</button>
-                      <button onClick={() => {onFilterChange('dor-e-febre'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Dor e Febre</button>
-                      <button onClick={() => {onFilterChange('antibioticos'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Antibióticos</button>
-                      <button onClick={() => {onFilterChange('gripe-e-resfriados'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Gripes e Resfriados</button>
-                      <button onClick={() => {onFilterChange('nauseas'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Nausea</button>
-                      <button onClick={() => {onFilterChange('sono-e-ansiedade'); setIsOpen(false);}} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sono e Ansiedade</button>
-                  </div>
-              </div>
-          }
-      </div>
+                    {Object.keys(filterMap).map(filterName => (
+                      <button 
+                        onClick={() => {onFilterChange(filterMap[filterName]); setIsOpen(false);}} 
+                        className={buttonStyle(filterMap[filterName])} 
+                        role="menuitem"
+                      >
+                    {filterName}
+                </button>
+              ))}
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
+
 
 function ProductCard({ image, name, price, category }) {
   const slug = name.toLowerCase().replace(/\s+/g, '-');
@@ -47,10 +64,10 @@ function ProductCard({ image, name, price, category }) {
       </div>
 
       <div className="text-center">
-        <h4 className='text-gray-700 font-medium'>{name}</h4>
+        <h3 className='text-gray-700 font-medium'>{name}</h3>
         
         <p className="text-sm text-red-500 font-bold mt-2">Melhor escolha!</p>
-        <h3 className='mt-2 text-red-600 font-semibold'>{price}</h3>
+        <h4 className='mt-2 text-red-600 font-semibold'>{price}</h4>
       </div>
 
       <div className="mt-4 flex space-x-4 w-full px-4 justify-center">
@@ -95,7 +112,7 @@ function SectionPills() {
             </div>
 
             
-            <FilterComponent onFilterChange={handleFilterChange} />
+            <FilterComponent onFilterChange={handleFilterChange} activeFilter={activeFilter} />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 w-full">
                 {currentProducts.map((product, index) => (
@@ -121,8 +138,8 @@ function SectionPills() {
                 </button>
           </div>
           <Link to="/videos">
-          <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600  text-white py-4 text-center text-base md:text-lg font-bold mx-2 md:mx-4 mt-6 md:mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
-               Destaque-se com exclusividade: Seus medicamentos não são apenas mais um na lista. Em Pilulas.com.br, quando você divulga, ninguém mais divulga igual. Clique aqui e descubra como!
+          <div className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600  text-white py-4 px-3 text-center text-base md:text-lg font-bold mx-2 md:mx-4 mt-6 md:mt-10 rounded-lg shadow-md transform transition-transform hover:scale-105 cursor-pointer">
+               Destaque-se com exclusividade: <br />  Seus medicamentos não são apenas mais um na lista. Em Pilulas.com.br, quando você divulga, ninguém mais divulga igual. <br />Clique aqui e descubra como!
         </div>
         </Link> 
         </div>
