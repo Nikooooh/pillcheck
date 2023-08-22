@@ -1,36 +1,38 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from './Componentes/Header/Header';
-import Sobre from './Componentes/Routes/Sobre';
-import Home from './Componentes/Routes/Home';
-import Contato from './Componentes/Routes/Contato';
-import Pesquisa from './Componentes/Routes/Pesquisa';
-import ProductDetail from './Componentes/ProductsDetails/CloridratoDeOndansetrona';
-import DivulgueAqui from './Componentes/Routes/Videos';
-import ExclusivePurchasePage from './Componentes/Routes/CompraExcluisiva';
+
+const Sobre = lazy(() => import('./Componentes/Routes/Sobre'));
+const Home = lazy(() => import('./Componentes/Routes/Home'));
+const Contato = lazy(() => import('./Componentes/Routes/Contato'));
+const Pesquisa = lazy(() => import('./Componentes/Routes/Pesquisa'));
+const ProductDetail = lazy(() => import('./Componentes/ProductsDetails/CloridratoDeOndansetrona'));
+const DivulgueAqui = lazy(() => import('./Componentes/Routes/Videos'));
+const ExclusivePurchasePage = lazy(() => import('./Componentes/Routes/CompraExcluisiva'));
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path='/sobre' element={<Sobre />} />
-        <Route path='/' element={<Home />} />
-        <Route path='/contato' element={<Contato />} />
-        <Route path='/pesquisa' element={<Pesquisa />} />
-        <Route path="/product/:slug" element={<ProductDetail />} />
-        <Route path="/videos" Component={DivulgueAqui} />
-        <Route path="/compra-exclusiva" Component={ExclusivePurchasePage} />
-      </Routes>
+      <Suspense fallback={<div>Carregando...</div>}>
+        <Routes>
+          <Route path='/sobre' element={<Sobre />} />
+          <Route path='/' element={<Home />} />
+          <Route path='/contato' element={<Contato />} />
+          <Route path='/pesquisa' element={<Pesquisa />} />
+          <Route path="/product/:slug" element={<ProductDetail />} />
+          <Route path="/videos" element={<DivulgueAqui />} />
+          <Route path="/compra-exclusiva" element={<ExclusivePurchasePage />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
