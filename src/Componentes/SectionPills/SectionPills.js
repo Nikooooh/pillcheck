@@ -57,7 +57,7 @@ function ProductCard({ image, name, price, category }) {
   return (
     <div className="shadow-lg bg-gray-100 h-96 mb-6 mt-6 rounded-lg p-4 flex flex-col items-center justify-between hover:shadow-xl transition-shadow duration-300">
       <div className="h-48 w-48 relative rounded-md overflow-hidden border-2 border-orange-500 hover:border-red-500 transition-border duration-300">
-        <img src={image} className="absolute h-full w-full object-cover object-center transform transition-transform duration-300 hover:scale-110" alt={`Foto de ${name}`} />
+        <img loading="lazy" src={image} className="absolute h-full w-full object-cover object-center transform transition-transform duration-300 hover:scale-110" alt={`Foto de ${name}`} />
         <div className="absolute inset-0 bg-black opacity-0 hover:opacity-40 transition-opacity duration-300 flex items-center justify-center">
           <span className="text-white text-lg font-bold"><i className="fas fa-shopping-cart"></i> Comprar</span>
         </div>
